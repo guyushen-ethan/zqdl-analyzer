@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import akshare as ak
 import os
 
+os.environ['AKSHARE_CACHE_PATH'] = 'NUL'  # Windows
+
 # === Streamlit 页面设置 ===
 st.set_page_config(
     page_title="紫气东来基金收益分析",
@@ -129,4 +131,5 @@ if uploaded_file is not None:
         st.info("常见原因：文件格式错误、列名不匹配、网络问题等。")
 
 else:
+
     st.info("👆 请上传 Excel 文件以开始分析。")
